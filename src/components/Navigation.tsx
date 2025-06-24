@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import { Download } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,6 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'HOME', path: '/', icon: '◉' },
-    { name: 'ABOUT', path: '/about', icon: '◈' },
     { name: 'PROJECTS', path: '/projects', icon: '◇' },
     { name: 'SKILLS', path: '/skills', icon: '◆' },
     { name: 'CONTACT', path: '/contact', icon: '◎' },
@@ -52,7 +52,7 @@ const Navigation = () => {
         className="fixed top-6 left-1/2 transform -translate-x-1/2 z-40 hidden lg:block"
       >
         <div className="cyber-glass px-8 py-4 rounded-full">
-          <div className="flex space-x-8">
+          <div className="flex space-x-6 items-center">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -87,6 +87,20 @@ const Navigation = () => {
                 </Link>
               </motion.div>
             ))}
+            
+            {/* Resume Button */}
+            <motion.a
+              href="https://drive.google.com/file/d/134uyGalt1xA8Lwa31mkKkbvFmCwxmi1_/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative font-orbitron text-sm font-medium tracking-wider transition-all duration-300 text-gray-300 hover:text-emerald-400 flex items-center space-x-2 px-3 py-2 border border-emerald-400/30 rounded-full hover:bg-emerald-400/10"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <Download className="w-4 h-4" />
+              <span>RESUME</span>
+            </motion.a>
           </div>
         </div>
       </motion.nav>
@@ -142,6 +156,23 @@ const Navigation = () => {
                       </Link>
                     </motion.div>
                   ))}
+                  
+                  {/* Resume Button Mobile */}
+                  <motion.a
+                    href="https://drive.google.com/file/d/134uyGalt1xA8Lwa31mkKkbvFmCwxmi1_/view"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="group flex items-center space-x-4 p-4 rounded-lg transition-all duration-300 text-gray-300 hover:bg-emerald-400/10 hover:text-emerald-400 border border-emerald-400/30"
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <Download className="w-6 h-6" />
+                    <span className="font-orbitron font-medium tracking-wider">
+                      RESUME
+                    </span>
+                  </motion.a>
                 </div>
               </div>
             </motion.div>

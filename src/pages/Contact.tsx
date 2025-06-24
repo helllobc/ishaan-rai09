@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Terminal, User, MessageSquare, Linkedin, Github } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
@@ -21,7 +20,7 @@ const Contact = () => {
     });
   };
 
-  const onSubmit = async (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await handleSubmit(e);
     
@@ -88,7 +87,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="font-orbitron text-5xl md:text-7xl font-bold text-cyan-400 mb-6" style={{ textShadow: '0 0 20px rgba(34, 211, 238, 0.6)' }}>
+            <h1 className="font-orbitron text-5xl md:text-7xl font-bold text-cyan-300 mb-6" style={{ textShadow: '0 0 20px rgba(103, 232, 249, 0.6)' }}>
               ESTABLISH CONNECTION
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-pink-400 mx-auto mb-8" />
@@ -240,7 +239,42 @@ const Contact = () => {
             >
               {/* Contact Methods */}
               <div className="space-y-4">
-                {contactInfo.map((info, index) => (
+                {[
+                  {
+                    icon: Mail,
+                    label: 'EMAIL PROTOCOL',
+                    value: 'ishaanrai18@gmail.com',
+                    color: 'cyan-400',
+                    link: 'mailto:ishaanrai18@gmail.com',
+                  },
+                  {
+                    icon: Phone,
+                    label: 'COMM FREQUENCY',
+                    value: '+91 9464925517',
+                    color: 'emerald-400',
+                    link: 'tel:+919464925517',
+                  },
+                  {
+                    icon: MapPin,
+                    label: 'LOCATION NODE',
+                    value: 'Chandigarh, India',
+                    color: 'pink-400',
+                  },
+                  {
+                    icon: Linkedin,
+                    label: 'LINKEDIN NETWORK',
+                    value: 'linkedin.com/in/ishaan-rai',
+                    color: 'yellow-400',
+                    link: 'https://www.linkedin.com/in/ishaan-rai',
+                  },
+                  {
+                    icon: Github,
+                    label: 'CODE REPOSITORY',
+                    value: 'github.com/Ishaan-Rai09',
+                    color: 'purple-400',
+                    link: 'https://github.com/Ishaan-Rai09',
+                  },
+                ].map((info, index) => (
                   <motion.div
                     key={info.label}
                     initial={{ opacity: 0, y: 20 }}
@@ -270,11 +304,34 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Status Panel */}
+              {/* Resume Link */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.1 }}
+                className="cyber-glass p-6 rounded-lg group hover:bg-gradient-to-r hover:from-transparent hover:to-cyan-400/5 transition-all cursor-pointer"
+                onClick={() => window.open('https://drive.google.com/file/d/134uyGalt1xA8Lwa31mkKkbvFmCwxmi1_/view', '_blank')}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 cyber-glass rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Terminal className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <div>
+                    <div className="font-share-tech text-sm text-gray-400 mb-1">
+                      RESUME ACCESS
+                    </div>
+                    <div className="font-rajdhani text-lg font-medium text-cyan-400 hover:underline">
+                      Download CV
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Status Panel */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.3 }}
                 className="cyber-glass p-6 rounded-lg"
               >
                 <h3 className="font-orbitron text-xl font-bold text-emerald-400 mb-4" style={{ textShadow: '0 0 15px rgba(52, 211, 153, 0.5)' }}>
@@ -301,7 +358,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.3 }}
+                transition={{ duration: 0.5, delay: 1.5 }}
                 className="cyber-glass p-6 rounded-lg relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-400 to-emerald-400" />
