@@ -5,10 +5,10 @@ import Navigation from '../components/Navigation';
 
 const About = () => {
   const stats = [
-    { label: 'Projects Completed', value: '25+', icon: Code },
-    { label: 'Years Experience', value: '3+', icon: Zap },
-    { label: 'Client Satisfaction', value: '98%', icon: Target },
-    { label: 'Awards Won', value: '12', icon: Trophy },
+    { label: 'Hackathons Won', value: '8+', icon: Trophy },
+    { label: 'Years Experience', value: '2+', icon: Zap },
+    { label: 'Projects Built', value: '15+', icon: Code },
+    { label: 'CGPA', value: '7.40', icon: Target },
   ];
 
   return (
@@ -77,20 +77,22 @@ const About = () => {
                 <div className="space-y-4 font-rajdhani text-lg text-gray-300">
                   <p>
                     Greetings, I'm <span className="text-cyber-blue font-bold">Ishaan Rai</span>, 
-                    a digital architect specializing in creating immersive web experiences 
-                    that bridge the gap between cutting-edge technology and cyberpunk aesthetics.
+                    a 3rd-year Computer Science student at Chitkara University with a passion for 
+                    AI, automation, and competitive programming. Currently maintaining a 7.40 CGPA 
+                    while dominating hackathons across the nation.
                   </p>
                   
                   <p>
-                    My mission is to build the future of digital interaction through 
-                    innovative UI/UX design, advanced animations, and robust full-stack 
-                    development that pushes the boundaries of what's possible.
+                    My mission is to join a MAANG company as a Software Engineer, building 
+                    innovative solutions that bridge AI technology with real-world problems. 
+                    As an extroverted coder, I thrive in collaborative environments and love 
+                    the thrill of hackathon competitions.
                   </p>
                   
                   <p>
-                    When I'm not coding, you'll find me exploring virtual worlds, 
-                    studying the latest in AI and blockchain technology, or 
-                    contributing to open-source projects that shape tomorrow's web.
+                    With 8+ hackathon victories including 1st place at Gamethon (₹6,000 prize) 
+                    and multiple top-10 finishes in national competitions, I'm always ready 
+                    for the next coding challenge that pushes technological boundaries.
                   </p>
                 </div>
 
@@ -98,11 +100,11 @@ const About = () => {
                 <div className="flex space-x-4 mt-8">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-cyber-green rounded-full animate-pulse" />
-                    <span className="font-share-tech text-sm text-cyber-green">ONLINE</span>
+                    <span className="font-share-tech text-sm text-cyber-green">HACKATHON READY</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-cyber-blue rounded-full animate-pulse" />
-                    <span className="font-share-tech text-sm text-cyber-blue">AVAILABLE FOR HIRE</span>
+                    <span className="font-share-tech text-sm text-cyber-blue">DEAN'S LIST</span>
                   </div>
                 </div>
               </div>

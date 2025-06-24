@@ -6,60 +6,63 @@ import Navigation from '../components/Navigation';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend Arsenal',
+      title: 'Programming Languages',
       icon: Code,
       color: 'cyber-blue',
       skills: [
-        { name: 'React/Next.js', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Tailwind CSS', level: 92 },
-        { name: 'Three.js/WebGL', level: 85 },
-        { name: 'Framer Motion', level: 88 },
+        { name: 'C++', level: 90 },
+        { name: 'Python', level: 88 },
+        { name: 'JavaScript', level: 92 },
+        { name: 'TypeScript', level: 85 },
+        { name: 'Java', level: 80 },
+        { name: 'C', level: 85 },
       ],
     },
     {
-      title: 'Backend Systems',
-      icon: Database,
-      color: 'cyber-green',
-      skills: [
-        { name: 'Node.js/Express', level: 88 },
-        { name: 'Python/Django', level: 82 },
-        { name: 'PostgreSQL/MongoDB', level: 85 },
-        { name: 'GraphQL/REST APIs', level: 90 },
-        { name: 'Docker/Kubernetes', level: 78 },
-      ],
-    },
-    {
-      title: 'Design Interface',
+      title: 'Frontend Development',
       icon: Palette,
       color: 'cyber-pink',
       skills: [
-        { name: 'UI/UX Design', level: 90 },
-        { name: 'Adobe Creative Suite', level: 85 },
-        { name: 'Figma/Sketch', level: 92 },
-        { name: 'Motion Graphics', level: 80 },
-        { name: 'Brand Identity', level: 88 },
+        { name: 'React.js', level: 92 },
+        { name: 'Next.js', level: 88 },
+        { name: 'TailwindCSS', level: 90 },
+        { name: 'HTML/CSS', level: 95 },
+        { name: 'Responsive Design', level: 90 },
       ],
     },
     {
-      title: 'DevOps Protocol',
-      icon: Shield,
+      title: 'Backend & Database',
+      icon: Database,
+      color: 'cyber-green',
+      skills: [
+        { name: 'Node.js', level: 85 },
+        { name: 'Express.js', level: 88 },
+        { name: 'FastAPI', level: 80 },
+        { name: 'MongoDB', level: 85 },
+        { name: 'MySQL', level: 82 },
+        { name: 'Prisma ORM', level: 78 },
+      ],
+    },
+    {
+      title: 'AI/ML & Tools',
+      icon: Cpu,
       color: 'cyber-yellow',
       skills: [
-        { name: 'AWS/GCP/Azure', level: 82 },
-        { name: 'CI/CD Pipelines', level: 85 },
-        { name: 'Monitoring/Logging', level: 80 },
-        { name: 'Security Best Practices', level: 88 },
-        { name: 'Performance Optimization', level: 90 },
+        { name: 'LangChain', level: 85 },
+        { name: 'TensorFlow', level: 80 },
+        { name: 'Streamlit', level: 88 },
+        { name: 'Git/GitHub', level: 90 },
+        { name: 'Docker', level: 75 },
+        { name: 'Figma', level: 85 },
       ],
     },
   ];
 
   const achievements = [
-    { title: 'Full Stack Developer', description: 'Mastered end-to-end development', icon: Cpu },
-    { title: 'UI/UX Specialist', description: 'Expert in user experience design', icon: Palette },
-    { title: 'Performance Optimizer', description: 'Achieved 99% page speed scores', icon: Zap },
-    { title: 'Security Expert', description: 'Implemented zero-breach protocols', icon: Shield },
+    { title: 'Hackathon Champion', description: 'Won 8+ hackathons including Gamethon 1st place', icon: Zap },
+    { title: 'Dean\'s List', description: 'Top project team out of 200 students', icon: Shield },
+    { title: 'AI Specialist', description: 'Expert in machine learning and automation', icon: Cpu },
+    { title: 'Full Stack Developer', description: 'Mastered end-to-end development', icon: Code },
   ];
 
   return (
@@ -82,7 +85,7 @@ const Skills = () => {
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-cyber-blue to-cyber-pink mx-auto mb-8" />
             <p className="font-rajdhani text-xl text-gray-300 max-w-2xl mx-auto">
-              Advanced capabilities acquired through countless hours of digital combat
+              Advanced capabilities acquired through countless hours of competitive programming and hackathon battles
             </p>
           </motion.div>
 

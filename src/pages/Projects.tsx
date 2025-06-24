@@ -1,49 +1,43 @@
 
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Zap, Shield, Cpu, Database } from 'lucide-react';
+import { ExternalLink, Github, Brain, Coffee, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Neural Network Dashboard',
-      category: 'AI/ML',
-      description: 'Real-time neural network visualization with cyberpunk aesthetics',
-      tech: ['React', 'Three.js', 'TensorFlow', 'WebGL'],
-      status: 'COMPLETED',
-      icon: Cpu,
-      gradient: 'from-cyber-blue to-cyber-green',
+      title: 'NeuroSync AI',
+      category: 'AI/Mental Health',
+      description: 'Mental health companion with AI chatbot, voice calling agent (Ashna), and encrypted journaling. Provides immediate support for users with depression or suicidal thoughts using sentiment analysis.',
+      tech: ['Next.js', 'Groq API', 'VAPI', 'Pinata Cloud', 'AES Encryption'],
+      status: 'DEPLOYED',
+      icon: Shield,
+      gradient: 'from-cyber-pink to-cyber-purple',
+      liveUrl: 'https://neuro-sync-updated.vercel.app/',
+      githubUrl: 'https://github.com/Ishaan-Rai09/NeuroSync-Updated',
     },
     {
       id: 2,
-      title: 'Quantum Data Vault',
-      category: 'Security',
-      description: 'Encrypted data storage with biometric authentication',
-      tech: ['Node.js', 'MongoDB', 'Encryption', 'Biometrics'],
-      status: 'IN PROGRESS',
-      icon: Shield,
-      gradient: 'from-cyber-pink to-cyber-purple',
+      title: 'Brain Tumor Detection',
+      category: 'AI/Medical',
+      description: 'Medical AI system helping doctors with instant brain tumor detection and classification from MRI images using CNN models and machine learning.',
+      tech: ['React', 'Next.js', 'CNN', 'TensorFlow', 'Scikit-learn'],
+      status: 'COMPLETED',
+      icon: Brain,
+      gradient: 'from-cyber-blue to-cyber-green',
+      githubUrl: 'https://github.com/Ishaan-Rai09/Brain-Tumor',
     },
     {
       id: 3,
-      title: 'Holographic Portfolio',
-      category: 'Frontend',
-      description: 'Interactive 3D portfolio with WebXR integration',
-      tech: ['React', 'Three.js', 'WebXR', 'Framer Motion'],
+      title: 'Decentralized Coffee Shop',
+      category: 'Web3/E-commerce',
+      description: 'Coffee e-commerce platform with decentralized payment system using Telos blockchain currency for secure and transparent transactions.',
+      tech: ['Next.js', 'MongoDB', 'Telos Blockchain', 'Web3'],
       status: 'DEPLOYED',
-      icon: Zap,
+      icon: Coffee,
       gradient: 'from-cyber-green to-cyber-yellow',
-    },
-    {
-      id: 4,
-      title: 'Blockchain Explorer',
-      category: 'Web3',
-      description: 'Cryptocurrency transaction explorer with real-time updates',
-      tech: ['Next.js', 'Web3.js', 'GraphQL', 'Socket.io'],
-      status: 'BETA',
-      icon: Database,
-      gradient: 'from-cyber-yellow to-cyber-pink',
+      githubUrl: 'https://github.com/Ishaan-Rai09/coffee-shop',
     },
   ];
 
@@ -67,12 +61,12 @@ const Projects = () => {
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-cyber-blue to-cyber-pink mx-auto mb-8" />
             <p className="font-rajdhani text-xl text-gray-300 max-w-2xl mx-auto">
-              Explore my digital arsenal of cutting-edge projects that push the boundaries of technology
+              Explore my digital arsenal of AI-powered projects that solve real-world problems
             </p>
           </motion.div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -90,7 +84,6 @@ const Projects = () => {
                     <span className={`px-3 py-1 rounded-full text-xs font-share-tech ${
                       project.status === 'COMPLETED' ? 'bg-cyber-green/20 text-cyber-green' :
                       project.status === 'DEPLOYED' ? 'bg-cyber-blue/20 text-cyber-blue' :
-                      project.status === 'IN PROGRESS' ? 'bg-cyber-yellow/20 text-cyber-yellow' :
                       'bg-cyber-pink/20 text-cyber-pink'
                     }`}>
                       {project.status}
@@ -111,7 +104,7 @@ const Projects = () => {
                       {project.title}
                     </h3>
                     
-                    <p className="font-rajdhani text-gray-300 mb-6">
+                    <p className="font-rajdhani text-gray-300 mb-6 text-sm leading-relaxed">
                       {project.description}
                     </p>
 
@@ -129,19 +122,31 @@ const Projects = () => {
 
                     {/* Action Buttons */}
                     <div className="flex space-x-4">
-                      <button className="flex items-center space-x-2 px-4 py-2 cyber-glass rounded-lg hover:bg-cyber-blue/10 transition-colors group/btn">
-                        <ExternalLink className="w-4 h-4 text-cyber-blue group-hover/btn:text-cyber-pink transition-colors" />
-                        <span className="font-share-tech text-sm text-cyber-blue group-hover/btn:text-cyber-pink transition-colors">
-                          VIEW LIVE
-                        </span>
-                      </button>
+                      {project.liveUrl && (
+                        <a 
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center space-x-2 px-4 py-2 cyber-glass rounded-lg hover:bg-cyber-blue/10 transition-colors group/btn"
+                        >
+                          <ExternalLink className="w-4 h-4 text-cyber-blue group-hover/btn:text-cyber-pink transition-colors" />
+                          <span className="font-share-tech text-sm text-cyber-blue group-hover/btn:text-cyber-pink transition-colors">
+                            VIEW LIVE
+                          </span>
+                        </a>
+                      )}
                       
-                      <button className="flex items-center space-x-2 px-4 py-2 cyber-glass rounded-lg hover:bg-cyber-green/10 transition-colors group/btn">
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 px-4 py-2 cyber-glass rounded-lg hover:bg-cyber-green/10 transition-colors group/btn"
+                      >
                         <Github className="w-4 h-4 text-cyber-green group-hover/btn:text-cyber-yellow transition-colors" />
                         <span className="font-share-tech text-sm text-cyber-green group-hover/btn:text-cyber-yellow transition-colors">
                           SOURCE
                         </span>
-                      </button>
+                      </a>
                     </div>
                   </div>
 

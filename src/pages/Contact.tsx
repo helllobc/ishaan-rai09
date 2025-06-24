@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Terminal, User, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Terminal, User, MessageSquare, Linkedin, Github } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import { useState } from 'react';
 
@@ -44,20 +44,36 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'EMAIL PROTOCOL',
-      value: 'ishaan.rai@cybernet.dev',
+      value: 'ishaanrai18@gmail.com',
       color: 'cyber-blue',
+      link: 'mailto:ishaanrai18@gmail.com',
     },
     {
       icon: Phone,
       label: 'COMM FREQUENCY',
-      value: '+1 (555) CYBER-01',
+      value: '+91 9464925517',
       color: 'cyber-green',
+      link: 'tel:+919464925517',
     },
     {
       icon: MapPin,
       label: 'LOCATION NODE',
-      value: 'Neo San Francisco, CA',
+      value: 'Chandigarh, India',
       color: 'cyber-pink',
+    },
+    {
+      icon: Linkedin,
+      label: 'LINKEDIN NETWORK',
+      value: 'linkedin.com/in/ishaan-rai',
+      color: 'cyber-yellow',
+      link: 'https://www.linkedin.com/in/ishaan-rai',
+    },
+    {
+      icon: Github,
+      label: 'CODE REPOSITORY',
+      value: 'github.com/Ishaan-Rai09',
+      color: 'cyber-purple',
+      link: 'https://github.com/Ishaan-Rai09',
     },
   ];
 
@@ -81,7 +97,7 @@ const Contact = () => {
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-cyber-blue to-cyber-pink mx-auto mb-8" />
             <p className="font-rajdhani text-xl text-gray-300 max-w-2xl mx-auto">
-              Initialize secure communication protocol to discuss your next digital mission
+              Initialize secure communication protocol for collaboration opportunities
             </p>
           </motion.div>
 
@@ -130,7 +146,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-cyber-dark/50 border border-cyber-green/30 rounded-lg focus:border-cyber-green focus:ring-1 focus:ring-cyber-green/50 font-rajdhani text-white placeholder-gray-500 transition-all"
-                      placeholder="agent@cybernet.com"
+                      placeholder="agent@company.com"
                       required
                     />
                   </div>
@@ -147,7 +163,7 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-cyber-dark/50 border border-cyber-pink/30 rounded-lg focus:border-cyber-pink focus:ring-1 focus:ring-cyber-pink/50 font-rajdhani text-white placeholder-gray-500 transition-all"
-                      placeholder="Project briefing title..."
+                      placeholder="Collaboration opportunity..."
                       required
                     />
                   </div>
@@ -164,7 +180,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       rows={6}
                       className="w-full px-4 py-3 bg-cyber-dark/50 border border-cyber-yellow/30 rounded-lg focus:border-cyber-yellow focus:ring-1 focus:ring-cyber-yellow/50 font-rajdhani text-white placeholder-gray-500 transition-all resize-none"
-                      placeholder="Describe your digital mission objectives..."
+                      placeholder="Describe your project or opportunity..."
                       required
                     />
                   </div>
@@ -202,17 +218,20 @@ const Contact = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="space-y-8"
+              className="space-y-6"
             >
               {/* Contact Methods */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={info.label}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                    className="cyber-glass p-6 rounded-lg group hover:bg-gradient-to-r hover:from-transparent hover:to-cyber-blue/5 transition-all"
+                    className={`cyber-glass p-6 rounded-lg group hover:bg-gradient-to-r hover:from-transparent hover:to-${info.color}/5 transition-all ${
+                      info.link ? 'cursor-pointer' : ''
+                    }`}
+                    onClick={() => info.link && window.open(info.link, '_blank')}
                   >
                     <div className="flex items-center space-x-4">
                       <div className={`w-12 h-12 cyber-glass rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}>
@@ -222,7 +241,9 @@ const Contact = () => {
                         <div className="font-share-tech text-sm text-gray-400 mb-1">
                           {info.label}
                         </div>
-                        <div className={`font-rajdhani text-lg font-medium text-${info.color}`}>
+                        <div className={`font-rajdhani text-lg font-medium text-${info.color} ${
+                          info.link ? 'hover:underline' : ''
+                        }`}>
                           {info.value}
                         </div>
                       </div>
@@ -235,7 +256,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.9 }}
+                transition={{ duration: 0.5, delay: 1.1 }}
                 className="cyber-glass p-6 rounded-lg"
               >
                 <h3 className="font-orbitron text-xl font-bold neon-text-green mb-4">
@@ -249,11 +270,11 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-cyber-blue rounded-full animate-pulse" />
-                    <span className="font-share-tech text-sm text-gray-300">Availability: 24/7</span>
+                    <span className="font-share-tech text-sm text-gray-300">Available for MAANG opportunities</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-cyber-yellow rounded-full animate-pulse" />
-                    <span className="font-share-tech text-sm text-gray-300">Security Level: Maximum</span>
+                    <span className="font-share-tech text-sm text-gray-300">Hackathon Ready: Always</span>
                   </div>
                 </div>
               </motion.div>
@@ -262,18 +283,18 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.1 }}
+                transition={{ duration: 0.5, delay: 1.3 }}
                 className="cyber-glass p-6 rounded-lg relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-blue via-cyber-pink to-cyber-green" />
                 
                 <blockquote className="font-rajdhani text-lg italic text-gray-300 mb-4">
-                  "The future belongs to those who understand that technology is not just a tool, 
-                  but a canvas for creating digital art that changes the world."
+                  "Code is poetry in motion, and AI is the future canvas where we paint solutions 
+                  that transform the world one algorithm at a time."
                 </blockquote>
                 
                 <cite className="font-share-tech text-sm text-cyber-blue">
-                  - Ishaan Rai, Digital Architect
+                  - Ishaan Rai, Future MAANG Engineer
                 </cite>
               </motion.div>
             </motion.div>
