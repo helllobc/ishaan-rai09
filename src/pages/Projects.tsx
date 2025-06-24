@@ -13,7 +13,7 @@ const Projects = () => {
       tech: ['Next.js', 'Groq API', 'VAPI', 'Pinata Cloud', 'AES Encryption'],
       status: 'DEPLOYED',
       icon: Shield,
-      gradient: 'from-cyber-pink to-cyber-purple',
+      gradient: 'from-pink-400 to-purple-400',
       liveUrl: 'https://neuro-sync-updated.vercel.app/',
       githubUrl: 'https://github.com/Ishaan-Rai09/NeuroSync-Updated',
     },
@@ -25,7 +25,7 @@ const Projects = () => {
       tech: ['React', 'Next.js', 'CNN', 'TensorFlow', 'Scikit-learn'],
       status: 'COMPLETED',
       icon: Brain,
-      gradient: 'from-cyber-blue to-cyber-green',
+      gradient: 'from-cyan-400 to-emerald-400',
       githubUrl: 'https://github.com/Ishaan-Rai09/Brain-Tumor',
     },
     {
@@ -36,7 +36,7 @@ const Projects = () => {
       tech: ['Next.js', 'MongoDB', 'Telos Blockchain', 'Web3'],
       status: 'DEPLOYED',
       icon: Coffee,
-      gradient: 'from-cyber-green to-cyber-yellow',
+      gradient: 'from-emerald-400 to-yellow-400',
       githubUrl: 'https://github.com/Ishaan-Rai09/coffee-shop',
     },
   ];
@@ -56,10 +56,10 @@ const Projects = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="font-orbitron text-5xl md:text-7xl font-bold neon-text mb-6">
+            <h1 className="font-orbitron text-5xl md:text-7xl font-bold text-cyan-400 mb-6" style={{ textShadow: '0 0 20px rgba(34, 211, 238, 0.6)' }}>
               PROJECT ARCHIVES
             </h1>
-            <div className="w-32 h-1 bg-gradient-to-r from-cyber-blue to-cyber-pink mx-auto mb-8" />
+            <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-pink-400 mx-auto mb-8" />
             <p className="font-rajdhani text-xl text-gray-300 max-w-2xl mx-auto">
               Explore my digital arsenal of AI-powered projects that solve real-world problems
             </p>
@@ -82,9 +82,9 @@ const Projects = () => {
                   {/* Status Badge */}
                   <div className="absolute top-4 right-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-share-tech ${
-                      project.status === 'COMPLETED' ? 'bg-cyber-green/20 text-cyber-green' :
-                      project.status === 'DEPLOYED' ? 'bg-cyber-blue/20 text-cyber-blue' :
-                      'bg-cyber-pink/20 text-cyber-pink'
+                      project.status === 'COMPLETED' ? 'bg-emerald-400/20 text-emerald-400' :
+                      project.status === 'DEPLOYED' ? 'bg-cyan-400/20 text-cyan-400' :
+                      'bg-pink-400/20 text-pink-400'
                     }`}>
                       {project.status}
                     </span>
@@ -93,14 +93,14 @@ const Projects = () => {
                   {/* Project Icon */}
                   <div className="relative z-10 mb-6">
                     <div className="w-16 h-16 cyber-glass rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <project.icon className="w-8 h-8 text-cyber-blue group-hover:text-cyber-pink transition-colors" />
+                      <project.icon className="w-8 h-8 text-cyan-400 group-hover:text-pink-400 transition-colors" />
                     </div>
-                    <span className="font-share-tech text-sm text-cyber-blue">{project.category}</span>
+                    <span className="font-share-tech text-sm text-cyan-400">{project.category}</span>
                   </div>
 
                   {/* Project Info */}
                   <div className="relative z-10">
-                    <h3 className="font-orbitron text-2xl font-bold neon-text-pink mb-3">
+                    <h3 className="font-orbitron text-2xl font-bold text-pink-400 mb-3" style={{ textShadow: '0 0 15px rgba(244, 114, 182, 0.5)' }}>
                       {project.title}
                     </h3>
                     
@@ -113,7 +113,7 @@ const Projects = () => {
                       {project.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-cyber-dark/50 border border-cyber-blue/30 rounded-full text-xs font-share-tech text-cyber-blue"
+                          className="px-3 py-1 bg-cyber-dark/50 border border-cyan-400/30 rounded-full text-xs font-share-tech text-cyan-400"
                         >
                           {tech}
                         </span>
@@ -127,10 +127,10 @@ const Projects = () => {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center space-x-2 px-4 py-2 cyber-glass rounded-lg hover:bg-cyber-blue/10 transition-colors group/btn"
+                          className="flex items-center space-x-2 px-4 py-2 cyber-glass rounded-lg hover:bg-cyan-400/10 transition-colors group/btn"
                         >
-                          <ExternalLink className="w-4 h-4 text-cyber-blue group-hover/btn:text-cyber-pink transition-colors" />
-                          <span className="font-share-tech text-sm text-cyber-blue group-hover/btn:text-cyber-pink transition-colors">
+                          <ExternalLink className="w-4 h-4 text-cyan-400 group-hover/btn:text-pink-400 transition-colors" />
+                          <span className="font-share-tech text-sm text-cyan-400 group-hover/btn:text-pink-400 transition-colors">
                             VIEW LIVE
                           </span>
                         </a>
@@ -140,10 +140,10 @@ const Projects = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 px-4 py-2 cyber-glass rounded-lg hover:bg-cyber-green/10 transition-colors group/btn"
+                        className="flex items-center space-x-2 px-4 py-2 cyber-glass rounded-lg hover:bg-emerald-400/10 transition-colors group/btn"
                       >
-                        <Github className="w-4 h-4 text-cyber-green group-hover/btn:text-cyber-yellow transition-colors" />
-                        <span className="font-share-tech text-sm text-cyber-green group-hover/btn:text-cyber-yellow transition-colors">
+                        <Github className="w-4 h-4 text-emerald-400 group-hover/btn:text-yellow-400 transition-colors" />
+                        <span className="font-share-tech text-sm text-emerald-400 group-hover/btn:text-yellow-400 transition-colors">
                           SOURCE
                         </span>
                       </a>
@@ -152,7 +152,7 @@ const Projects = () => {
 
                   {/* Hover Effects */}
                   <motion.div
-                    className="absolute inset-0 border-2 border-cyber-blue/0 rounded-lg transition-all duration-300 group-hover:border-cyber-blue/50"
+                    className="absolute inset-0 border-2 border-cyan-400/0 rounded-lg transition-all duration-300 group-hover:border-cyan-400/50"
                     whileHover={{ scale: 1.02 }}
                   />
                 </div>

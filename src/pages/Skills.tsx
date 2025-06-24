@@ -80,10 +80,10 @@ const Skills = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="font-orbitron text-5xl md:text-7xl font-bold neon-text mb-6">
+            <h1 className="font-orbitron text-5xl md:text-7xl font-bold text-cyan-400 mb-6" style={{ textShadow: '0 0 20px rgba(34, 211, 238, 0.6)' }}>
               SKILL MATRICES
             </h1>
-            <div className="w-32 h-1 bg-gradient-to-r from-cyber-blue to-cyber-pink mx-auto mb-8" />
+            <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-pink-400 mx-auto mb-8" />
             <p className="font-rajdhani text-xl text-gray-300 max-w-2xl mx-auto">
               Advanced capabilities acquired through countless hours of competitive programming and hackathon battles
             </p>
@@ -104,7 +104,7 @@ const Skills = () => {
                   <div className={`w-12 h-12 cyber-glass rounded-lg flex items-center justify-center`}>
                     <category.icon className={`w-6 h-6 text-${category.color}`} />
                   </div>
-                  <h3 className="font-orbitron text-2xl font-bold neon-text-pink">
+                  <h3 className="font-orbitron text-2xl font-bold text-pink-400" style={{ textShadow: '0 0 15px rgba(244, 114, 182, 0.5)' }}>
                     {category.title}
                   </h3>
                 </div>
@@ -149,7 +149,7 @@ const Skills = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <h2 className="font-orbitron text-3xl font-bold neon-text-green text-center mb-12">
+            <h2 className="font-orbitron text-3xl font-bold text-emerald-400 text-center mb-12" style={{ textShadow: '0 0 15px rgba(52, 211, 153, 0.5)' }}>
               UNLOCKED ACHIEVEMENTS
             </h2>
             
@@ -160,13 +160,13 @@ const Skills = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                  className="cyber-glass p-6 text-center group hover:bg-cyber-blue/5 transition-colors"
+                  className="cyber-glass p-6 text-center group hover:bg-cyan-400/5 transition-colors"
                 >
                   <div className="w-16 h-16 mx-auto mb-4 cyber-glass rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <achievement.icon className="w-8 h-8 text-cyber-blue group-hover:text-cyber-pink transition-colors" />
+                    <achievement.icon className="w-8 h-8 text-cyan-400 group-hover:text-pink-400 transition-colors" />
                   </div>
                   
-                  <h4 className="font-orbitron font-bold neon-text mb-2">
+                  <h4 className="font-orbitron font-bold text-cyan-400 mb-2" style={{ textShadow: '0 0 10px rgba(34, 211, 238, 0.5)' }}>
                     {achievement.title}
                   </h4>
                   
