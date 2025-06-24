@@ -58,7 +58,7 @@ const Index = () => {
     {
       year: '2025',
       title: 'Current Mission',
-      description: 'Maintaining 7.40 CGPA while building AI-powered solutions and leading student initiatives.'
+      description: 'Maintaining 9.40 CGPA while building AI-powered solutions and leading student initiatives.'
     },
     {
       year: '2027',
@@ -118,7 +118,7 @@ const Index = () => {
                       passion for AI, automation, and the art of competitive programming.
                     </p>
                     <p>
-                      Currently maintaining a <span className="text-yellow-400 font-bold">7.40 CGPA</span> 
+                      Currently maintaining a <span className="text-yellow-400 font-bold">9.40 CGPA</span> 
                       while conquering hackathons across the nation. My ultimate mission: to secure a 
                       coveted position as a Software Engineer at a <span className="text-pink-400 font-bold">MAANG company</span>.
                     </p>
