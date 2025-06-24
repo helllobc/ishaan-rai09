@@ -117,10 +117,10 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
               >
-                <div>> Connecting to mainframe...</div>
-                <div>> Loading portfolio data...</div>
-                <div>> Initializing cybersecurity protocols...</div>
-                <div>> Ready to deploy...</div>
+                <div>{'>'} Connecting to mainframe...</div>
+                <div>{'>'} Loading portfolio data...</div>
+                <div>{'>'} Initializing cybersecurity protocols...</div>
+                <div>{'>'} Ready to deploy...</div>
               </motion.div>
             </motion.div>
           </div>
