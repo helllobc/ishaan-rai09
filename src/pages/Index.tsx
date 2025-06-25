@@ -5,6 +5,7 @@ import { Code, Zap, Trophy, Brain, Users, Target } from 'lucide-react';
 import Preloader from '../components/Preloader';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -201,42 +202,45 @@ const Index = () => {
               </div>
             </motion.div>
 
-            {/* Call to Action */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="cyber-glass p-8 rounded-lg max-w-4xl mx-auto">
-                <h3 className="font-orbitron text-2xl font-bold text-emerald-400 mb-4" style={{ textShadow: '0 0 15px rgba(52, 211, 153, 0.5)' }}>
-                  Ready for the Next Challenge
-                </h3>
-                <p className="font-rajdhani text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Whether it's a hackathon, a collaborative project, or a full-time opportunity at a MAANG company, 
-                  I'm always ready to push the boundaries of what's possible with code and creativity.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <motion.a
-                    href="projects"
-                    className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-pink-400 rounded-lg font-orbitron font-bold text-black hover:from-emerald-400 hover:to-yellow-400 transition-all duration-300"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    VIEW PROJECTS
-                  </motion.a>
-                  <motion.a
-                    href="contact"
-                    className="px-6 py-3 cyber-glass rounded-lg font-orbitron font-bold text-cyan-400 border border-cyan-400/30 hover:bg-cyan-400/10 transition-all duration-300"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    START COLLABORATION
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
+{/* Call to Action */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="text-center"
+>
+  <div className="cyber-glass p-8 rounded-lg max-w-4xl mx-auto">
+    <h3 className="font-orbitron text-2xl font-bold text-emerald-400 mb-4" style={{ textShadow: '0 0 15px rgba(52, 211, 153, 0.5)' }}>
+      Ready for the Next Challenge
+    </h3>
+    <p className="font-rajdhani text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+      Whether it's a hackathon, a collaborative project, or a full-time opportunity at a MAANG company, 
+      I'm always ready to push the boundaries of what's possible with code and creativity.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      
+      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <Link
+          to="/projects"
+          className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-pink-400 rounded-lg font-orbitron font-bold text-black hover:from-emerald-400 hover:to-yellow-400 transition-all duration-300"
+        >
+          VIEW PROJECTS
+        </Link>
+      </motion.div>
+
+      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <Link
+          to="/contact"
+          className="px-6 py-3 cyber-glass rounded-lg font-orbitron font-bold text-cyan-400 border border-cyan-400/30 hover:bg-cyan-400/10 transition-all duration-300"
+        >
+          START COLLABORATION
+        </Link>
+      </motion.div>
+      
+    </div>
+  </div>
+</motion.div>
           </div>
         </section>
       </motion.main>
