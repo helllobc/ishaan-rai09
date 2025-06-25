@@ -219,7 +219,7 @@ const Index = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <motion.a
-                    href="/projects"
+                    href="src/pages/projects.tsx"
                     className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-pink-400 rounded-lg font-orbitron font-bold text-black hover:from-emerald-400 hover:to-yellow-400 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -227,7 +227,7 @@ const Index = () => {
                     VIEW PROJECTS
                   </motion.a>
                   <motion.a
-                    href="/contact"
+                    href="src/pages/contact.tsx"
                     className="px-6 py-3 cyber-glass rounded-lg font-orbitron font-bold text-cyan-400 border border-cyan-400/30 hover:bg-cyan-400/10 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
