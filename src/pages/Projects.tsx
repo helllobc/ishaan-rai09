@@ -1,6 +1,5 @@
-
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Brain, Coffee, Shield } from 'lucide-react';
+import { ExternalLink, Github, Brain, Coffee, Shield, Heart, Calendar, Gamepad2, Music, Lightbulb } from 'lucide-react';
 import Navigation from '../components/Navigation';
 
 const Projects = () => {
@@ -19,6 +18,68 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: 'Luxe Health AI',
+      category: 'AI/Healthcare',
+      description: 'Hackathon-winning healthcare project built with team Slashing Coders. Features MRI image scanning with AI models, PDF report generation with AES encryption, health query LLM, and voice AI calling agent for appointments.',
+      tech: ['Next.js', 'AI Models', 'MongoDB', 'Pinata Cloud', 'AES Encryption', 'LLM'],
+      status: 'DEPLOYED',
+      icon: Heart,
+      gradient: 'from-red-400 to-pink-400',
+      liveUrl: 'https://code-cubical-4-0.vercel.app/',
+      githubUrl: 'https://github.com/Ishaan-Rai09/Code-Cubical-4.0',
+      team: 'Team Slashing Coders: Ayushi, Aastha, Darshit',
+      hackathon: 'Code-Cubicals 4.0'
+    },
+    {
+      id: 3,
+      title: 'Elite Events',
+      category: 'Web Platform',
+      description: 'College events platform exclusively for Chitkara University students. One-stop solution for discovering and registering for technical, non-technical, and sports events happening on campus.',
+      tech: ['Next.js', 'React', 'MongoDB', 'Authentication'],
+      status: 'DEPLOYED',
+      icon: Calendar,
+      gradient: 'from-blue-400 to-purple-400',
+      liveUrl: 'https://elite-events-five.vercel.app/',
+      githubUrl: 'https://github.com/Ishaan-Rai09/Elite-Events',
+    },
+    {
+      id: 4,
+      title: 'Gamethon X',
+      category: 'Event Platform',
+      description: 'Official website for Gamethon X organized by We Craft company. Platform for gaming event management, registration, and participant coordination.',
+      tech: ['Next.js', 'React', 'Event Management'],
+      status: 'DEPLOYED',
+      icon: Gamepad2,
+      gradient: 'from-purple-400 to-indigo-400',
+      liveUrl: 'https://gamethon.vercel.app/',
+      githubUrl: 'https://github.com/Ishaan-Rai09/gamethon',
+    },
+    {
+      id: 5,
+      title: 'GEMP Music Production',
+      category: 'Client Project',
+      description: 'Professional music production website developed for a client. Features portfolio showcase, service offerings, and client interaction capabilities.',
+      tech: ['Next.js', 'React', 'Audio Integration'],
+      status: 'DEPLOYED',
+      icon: Music,
+      gradient: 'from-yellow-400 to-orange-400',
+      liveUrl: 'https://gemp-three.vercel.app/',
+      githubUrl: 'https://github.com/Ishaan-Rai09/gemp',
+    },
+    {
+      id: 6,
+      title: 'BrandStory AI',
+      category: 'AI/Productivity',
+      description: 'AI-powered tool for hackathon participants. Simply enter your project title and description, and BrandStory AI generates a perfect pitching story to help you present your ideas effectively.',
+      tech: ['Next.js', 'AI/LLM', 'Story Generation'],
+      status: 'DEPLOYED',
+      icon: Lightbulb,
+      gradient: 'from-green-400 to-teal-400',
+      liveUrl: 'https://brandstory-two.vercel.app/',
+      githubUrl: 'https://github.com/Ishaan-Rai09/brandstory',
+    },
+    {
+      id: 7,
       title: 'Brain Tumor Detection',
       category: 'AI/Medical',
       description: 'Medical AI system helping doctors with instant brain tumor detection and classification from MRI images using CNN models and machine learning.',
@@ -29,7 +90,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/Ishaan-Rai09/Brain-Tumor',
     },
     {
-      id: 3,
+      id: 8,
       title: 'Decentralized Coffee Shop',
       category: 'Web3/E-commerce',
       description: 'Coffee e-commerce platform with decentralized payment system using Telos blockchain currency for secure and transparent transactions.',
@@ -104,9 +165,25 @@ const Projects = () => {
                       {project.title}
                     </h3>
                     
-                    <p className="font-rajdhani text-gray-300 mb-6 text-sm leading-relaxed">
+                    <p className="font-rajdhani text-gray-300 mb-4 text-sm leading-relaxed">
                       {project.description}
                     </p>
+
+                    {/* Team and Hackathon Info */}
+                    {(project.team || project.hackathon) && (
+                      <div className="mb-4 space-y-1">
+                        {project.hackathon && (
+                          <p className="font-share-tech text-xs text-yellow-400">
+                            HACKATHON: {project.hackathon}
+                          </p>
+                        )}
+                        {project.team && (
+                          <p className="font-share-tech text-xs text-emerald-400">
+                            TEAM: {project.team}
+                          </p>
+                        )}
+                      </div>
+                    )}
 
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2 mb-6">
